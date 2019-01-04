@@ -3,7 +3,7 @@
   "displayName": "structed",
   "description": "Structured editing for JavaScript",
   "publisher": "roman01la",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.30.0"
   },
