@@ -1,0 +1,106 @@
+{
+  "name": "structed",
+  "displayName": "structed",
+  "description": "Structured editing for JavaScript",
+  "publisher": "roman01la",
+  "version": "0.0.1-alpha",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "url": "https://github.com/roman01la/vscode-structed"
+  },
+  "icon": "icon.png",
+  "activationEvents": [
+    "onLanguage:javascript"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "structed.selectNodeAt",
+        "key": "ctrl+alt+a",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.expandSelectionAt",
+        "key": "ctrl+alt+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.shrinkSelectionAt",
+        "key": "ctrl+alt+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.nextNodeAt",
+        "key": "ctrl+alt+x",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.prevNodeAt",
+        "key": "ctrl+alt+z",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.toTopLevel",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "structed.cutNodeAt",
+        "key": "ctrl+alt+k",
+        "when": "editorTextFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "structed.selectNodeAt",
+        "title": "Select Node At Cursor"
+      },
+      {
+        "command": "structed.expandSelectionAt",
+        "title": "Expand Selection"
+      },
+      {
+        "command": "structed.shrinkSelectionAt",
+        "title": "Shrink Selection"
+      },
+      {
+        "command": "structed.nextNodeAt",
+        "title": "Select Next Node"
+      },
+      {
+        "command": "structed.prevNodeAt",
+        "title": "Select Previous Node"
+      },
+      {
+        "command": "structed.toTopLevel",
+        "title": "Select Top Level Node"
+      },
+      {
+        "command": "structed.cutNodeAt",
+        "title": "Cut Selected Node"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "eslint": "^4.11.0",
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.25"
+  },
+  "dependencies": {
+    "babel-generator": "^6.26.1",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0"
+  }
+}
